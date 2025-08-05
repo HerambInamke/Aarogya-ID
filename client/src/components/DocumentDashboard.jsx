@@ -17,7 +17,7 @@ import {
   Settings,
   User
 } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { api } from '../services/api';
 
 const DocumentDashboard = () => {
@@ -25,6 +25,7 @@ const DocumentDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     setLoading(true);
@@ -147,8 +148,20 @@ const DocumentDashboard = () => {
                 <span className="text-red-600 font-medium">Review</span>
               </div>
               <div className="flex items-center space-x-4">
-                <span className="text-sm text-gray-500">Dashboard</span>
-                <span className="text-sm text-gray-500">Table</span>
+                <div className="bg-gray-100 rounded-lg p-1 flex">
+                  <Link
+                    to="/dashboard"
+                    className={`px-4 py-1 rounded-md text-sm focus:outline-none transition-all ${location.pathname === '/dashboard' ? 'bg-white text-gray-900 shadow border font-bold' : 'text-gray-400 font-normal'}`}
+                  >
+                    Dashboard
+                  </Link>
+                  <Link
+                    to="/table"
+                    className={`px-4 py-1 rounded-md text-sm focus:outline-none transition-all ${location.pathname === '/table' ? 'bg-white text-gray-900 shadow border font-bold' : 'text-gray-400 font-normal'}`}
+                  >
+                    Table
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

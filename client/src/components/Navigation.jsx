@@ -9,12 +9,13 @@ const Navigation = () => {
 
   return (
     <nav className="bg-white shadow-lg border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
-            <Activity className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">SwasthX</span>
-          </div>
+      <div className="max-w-7xl mx-auto px-0 sm:px-0 lg:px-0">
+        <div className="flex justify-between items-center h-16 p-0 m-0">
+        <div className="flex items-start space-x-0 ml-0 p-0 m-0 h-full">
+  <Activity className="h-8 w-8 text-blue-600 mt-0" />
+  <span className="text-2xl font-bold text-gray-900 mt-[9px]">SwasthX</span>
+</div>
+
           
           <div className="flex space-x-8">
             <Link
