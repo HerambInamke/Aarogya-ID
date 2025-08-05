@@ -20,6 +20,15 @@ mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ MongoDB connected successfully'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
 
+// Root route - Hi from backend
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Hi from backend!',
+    status: 'success',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Routes
 app.use('/api/documents', documentRoutes);
 
@@ -52,4 +61,5 @@ app.use('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📊 API available at http://localhost:${PORT}/api`);
-}); 
+  console.log(`👋 Root endpoint: http://localhost:${PORT}/`);
+});
