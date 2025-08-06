@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon-size {
+  @apply w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-14 lg:h-14;
+}
+
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-69.643%);
+
+  }
+}
+
+/* Or simply hardcode offset if known */
+.scroll-loop {
+  animation: scrollLoop 15s linear infinite alternate;
+}
