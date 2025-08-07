@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { api } from '../services/api';
+import {pp} from '../img/pp.svg'
 
 const DocumentDashboard = () => {
   const [documents, setDocuments] = useState([]);
@@ -114,7 +115,7 @@ const DocumentDashboard = () => {
         <div className="p-4 border-t border-gray-200">
           <div className="w-8 h-8 rounded-full overflow-hidden">
             <img 
-              src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&fit=crop&crop=face" 
+              src={pp} 
               alt="User profile" 
               className="w-full h-full object-cover"
             />
