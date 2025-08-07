@@ -21,3 +21,39 @@
 .scroll-loop {
   animation: scrollLoop 15s linear infinite alternate;
 }
+
+@keyframes arrow-slide {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-arrow-slide {
+  animation: arrow-slide 2.5s linear infinite;
+}
+
+
+
+@keyframes arrow-slide {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.animate-arrow-slide {
+  animation: arrow-slide 2s linear infinite;
+}
