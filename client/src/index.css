@@ -57,3 +57,21 @@
 .animate-arrow-slide {
   animation: arrow-slide 2s linear infinite;
 }
+
+@keyframes arrow-slide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(200px - 24px));
+    opacity: 0;
+  }
+}
+
+.animate-arrow-slide {
+  animation: arrow-slide 2s ease-in-out infinite;
+}
