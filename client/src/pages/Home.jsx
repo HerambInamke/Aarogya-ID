@@ -34,6 +34,7 @@ function Home() {
   return (
     <div className="w-full py-16 bg-white">
       <div className="max-w-7xl mx-auto">
+        
 
         {/* Top Section - Hero Text + Phone Carousel */}
         <div className="flex items-center justify-between mb-16 gap-12">
@@ -130,7 +131,7 @@ function Home() {
               <img src={phone} className="icon-size" alt="Phone" />
             </div>
           </div>
-
+                
           {/* Middle Circle Loader with Text */}
           <div className="relative flex justify-center items-center w-full">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64">
@@ -199,4 +200,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home;  
