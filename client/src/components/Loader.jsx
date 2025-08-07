@@ -1,5 +1,5 @@
 import React from 'react';
-import './loader.css';
+import './Loader.css';
 import downArrow from '../assets/r2.svg';
 import upArrow from '../assets/r1.svg';
 
